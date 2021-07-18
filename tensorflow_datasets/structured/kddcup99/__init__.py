@@ -1,5 +1,5 @@
 # coding=utf-8
-# Copyright 2021 Eli Osherovich.
+# Copyright 2021 The TensorFlow Datasets Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,26 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 """kdd_cup_99 dataset."""
 
-import tensorflow_datasets as tfds
-
-from . import kdd_cup_99
-
-
-class KddCup99Test(tfds.testing.DatasetBuilderTestCase):
-  """Tests for kdd_cup_99 dataset."""
-
-  DATASET_CLASS = kdd_cup_99.KddCup99
-  SPLITS = {
-    'train': 100,
-    'test': 10,
-  }
-  DL_EXTRACT_RESULT = {
-    'train': 'dummy_train.csv.gz',
-    'test': 'dummy_test.csv.gz',
-  }
-
-
-if __name__ == '__main__':
-  tfds.testing.test_main()
+from tensorflow_datasets.structured.kddcup99.kddcup99 import Kddcup99
